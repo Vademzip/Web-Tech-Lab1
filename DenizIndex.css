@@ -1,0 +1,33 @@
+*{  margin: 0;   padding: 0;   outline: none;}
+
+#header_table {
+    position: absolute;
+    width: 100%;
+    height: 17.5%;
+    border: 1px solid rgb(9, 228, 244);
+}
+
+#header_table img {
+    width: 200px;
+    height: 200px;
+}
+
+#Form {
+    text-align: right;
+}
+
+#under_header_table {
+    position: absolute;
+    width: 100%;
+    height: 17.5%;
+    border: 1px solid rgb(9, 228, 244);
+}
+
+table {
+    position: absolute;
+    width: 12.5%; 
+    height: 82.5%;
+    border: 1px solid blue;
+}
+
+    
