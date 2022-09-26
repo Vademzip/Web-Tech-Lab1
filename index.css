@@ -33,3 +33,44 @@
     position: relative;
     left: 184px;
 }
+
+.underHeader-table {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: 60px;
+    background-color: rgb(230, 189, 114);
+}
+
+.underHeader-table td {
+    text-align: center;
+    
+}
+
+.midleTable{
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: 750px;
+
+}
+
+.midleTable1{
+    background: rgb(255, 145, 0);
+    width: 15%;
+    /* align: center;
+    valign: top; */
+    align-items: center;
+    vertical-align: top;
+    text-align: center;
+}
+.midleTable3{
+    background: rgb(255, 145, 0);
+    width: 15%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.midleTable3 img{
+    max-width: 50%;
+}
