@@ -1,9 +1,14 @@
+
+
+
 /* Подключение шрифтов */
 
 *{
         margin: 0; 
         padding: 0;
-        outline: none; }
+        outline: none;
+        text-decoration: none; 
+}
 
 .header-table{
     width: 70%;
@@ -38,7 +43,7 @@
     margin-left: 15%;
     margin-right: 15%;
     width: 70%;
-    height: 60px;
+    height: 35px;
     background-color:rgb(255,187,52);
     margin-bottom: 10px;
 }
@@ -65,7 +70,20 @@
     text-align: center;
 }
 
-.midleTable1 a{}
+.midleTable1 a{
+
+}
+
+.searchPanel{
+    width: 92%;
+    margin-top: 2px;
+}
+
+hr{
+    position: relative;
+    bottom: 2px;
+    color: blue;
+}
 
 
 .midleTable3{
@@ -76,5 +94,5 @@
 }
 
 .midleTable3 img{
-    max-width: 50%;
+    max-width: 90%;
 }
