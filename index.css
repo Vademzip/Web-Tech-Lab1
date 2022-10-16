@@ -30,6 +30,10 @@
     font-weight: 800;
 }
 
+.underHeader-table:visited{
+    font-size: 100px;
+}
+
 .forms {
     text-align: right;
 }
@@ -72,6 +76,11 @@
 
 .midleTable1 a{
 
+}
+
+ul{
+    padding-left: 22px;
+    list-style-type: square;
 }
 
 .searchPanel{

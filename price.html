@@ -1,53 +1,236 @@
-<h1 align = "center" class="title">Цены на услуги</h1>
+<h1 align="center" class="title">Каталог</h1>
 
 
-<table align="center" style="width: 100% ;" class="iksweb">
-	<tbody>
-		<tr style="text-align: center;">
-			<td colspan="2">Москва</td>
-			<td colspan="2">Санкт-Петербург</td>
-		</tr>
-		<tr>
-			<td>Выиграть суд</td>
-			<td>Проиграть суд</td>
-			<td>Выирать суд</td>
-			<td>Проиграть суд</td>
-		</tr>
-		<tr>
-			<td align="center" colspan="4">1000 рублей.</td>
-		</tr>
-	</tbody>
+<center>
+	<table class="maintable" align="center">
+</center>
+<tr>
+	<td align="center">
+		<img src="https://easylex.ru/upload/iblock/b73/b73f60186c240b375f25c6bec3a35d95.jpg" alt="">
+		<p>Регистрация Общества с ограниченной ответственностью (ООО) «под ключ»</p>
+	</td>
+	<td align="center">
+		<img src="https://static.auction.ru/offer_images/2015/08/12/09/big/V/vUC4Gcu7MFy/sertifikat_1_akcija_mmm_1994_g.jpg"
+			alt="">
+		<p>Регистрация Акционерного общества (АО) и выпуска акций «под ключ»</p>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+		<img src="https://data.nalog.ru/cdn/image/1932481/original.jpg" alt="">
+		<p>Регистрация Индивидуальных предпринимателей</p>
+	</td>
+	<td align="center">
+		<img src="https://i.ytimg.com/vi/YM3l1j3PbfU/maxresdefault.jpg" alt="">
+		<p>Ликвидация и реорганизация фирм</p>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+		<img src="https://kseon.pro/upload/iblock/7af/7af95e7458e90b5bc9b2cb2ca456dcec.png" alt="">
+		<p>Содействие в оформлении электронно-цифровой подписи (УКЭП)</p>
+	</td>
+	<td align="center">
+		<img src="https://samsebeip.ru/wp-content/uploads/2019/08/2-2-732x1024.jpg" alt="">
+		<p>Постановка на налоговый учет в РФ иностранной организации</p>
+	</td>
+</tr>
 </table>
 
-<h4 align = "center" >Да-да, все услуги у нас стоят одинаково, за это нас и любят.</h4>
+<h4 align="center">Да-да, все услуги у нас стоят одинаково, за это нас и любят.</h4>
+
+<div class="popups">
+	<div class="popups_item1">
+		<h3>Название товара</h3>
+		<p>Описание товра</p>
+		<table>
+			<tr>
+				<th>Название</th>
+				<th>Цена</th>
+			</tr>
+			<tr>
+				<td>Космогель</td>
+				<td>2555р</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+
+<a href="#openModal">Открыть модальное окно</a>
+
+<!-- HTML модального окна -->
+<div id="openModal" class="modal">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title">Заголовок</h3>
+		  <a href="#close" title="Close" class="close">×</a>
+		</div>
+		<div class="modal-body">    
+		  <ul>
+			  <li>Содержание</li>
+			  <li>Содержание</li>
+			  <li>Содержание</li>
+			  <li>Содержание</li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+  
 
 <style>
-    table.iksweb{
-	width: 100%;
-	/* border-collapse:collapse; */
-    border-spacing: 10px;
-	height: auto;
-}
-table.iksweb,table.iksweb td, table.iksweb th {
-	border: 1px solid #595959;
-}
-table.iksweb td,table.iksweb th {
-	padding: 3px;
-	width: 30px;
-	height: 35px;
-}
-table.iksweb th {
-	background: #347c99; 
-	color: #fff; 
-	font-weight: normal;
-}
+	.maintable {
+		border-spacing: 10px;
+	}
 
-.title{
-        font-size: 24px;
-        font-weight: 700;
-        text-align: center;
-    }
+	.maintable td {
+		width: 50%;
+		border: 1px solid #000;
+		border-radius: 25px;
+		background-color: rgba(127, 255, 212, 0.15);
+	}
 
-*{font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+	table {
+		border-spacing: 10px;
+	}
+
+	td,th {
+		text-align: center;
+		width: 50%;
+		border: 1px solid #000;
+		border-radius: 25px;
+		background-color: rgba(127, 255, 212, 0.15);
+	}
+
+
+	.maintable img {
+		height: 200px;
+		width: 200px;
+	}
+
+	.title {
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	* {
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+
+	.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* фон */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* При отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: 30px auto; /* отображение окна по центру */
+  }
+}
+/* Стили для блока с контентом окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* Стили заголовка окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* Стили кнопки "х" ("Закрыть")  */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* Стили блока основного содержимого окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
 }
 </style>
