@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="../css/registrationAccount.css">
+</head>
+<body>
+  <body>
+    <table class="header-table lock-padding">
+        <td><a href="../html/index.html">
+                <center><img src="https://www.gestion.ru/wp-content/uploads/2020/09/logo6.svg" alt=""></center>
+            </a></td>
+        <td class="siteName">Гестион</td>
+        <td>
+            <div class="forms">
+                <div><label for="login">Логин : </label><input id="login"></div>
+                <div><label for="password">Пароль : </label><input id="password" type="password"></div>
+            </div>
+            <div class="reglogButtons">
+                <a href="registration_Account.html" target="mainpage">Регистрация</a>
+                <a href="loginPage.html"><button>Войти</button></a>
+            </div>
+        </td>
+    </table>
+
+    <table class="underHeader-table lock-padding">
+        <td><a href="../html/index.html">Главная</a></td>
+        <td><a href="aboutUs.html" target="mainpage">История фирмы</a></td>
+        <td><a href="aboutUs.html" target="mainpage">Сотрудники</a></td>
+        <td><a href="news.html" target="mainpage">Новости и Статьи</a></td>
+        <td><a href="registration.html" target="mainpage">Регистрация фирм</a></td>
+    </table>
+
+
+
+  <div class="registration_wrapper">
+    <h1 align = "center">Регистрация</h1>
+    <form autocomplete="off" action="">
+      <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName" value="Вадим"></div>
+      <div><label for="login"> Логин</label><input type="text" name="login" id="login" value="Vadem45454" required></div>
+      <div><label for="email"> Почта</label><input type="email" name="email" id="email" value="vadim.sardarov@yandex.ru"
+          required></div>
+      <div><label for="dateOfBirth"> Дата рождения</label><input type="date" name="dateOfBirth" value="2002-05-26"
+          id="dateOfBirth" checked></div>
+      <div><label for="phone-mask"> Номер телефона</label><input type="text" name="phoneNumber" value="9772596770" id="phone-mask" required>
+      </div>
+      <div><label for="password"> Введите пароль</label><input type="password" name="password" id="password" required>
+      </div>
+      <div><label for="passwordRewrite"> Введите пароль</label><input type="password" name="passwordRewrite"
+          id="passwordRewrite" required></div>
+      <div><label for="avatar"> Аватар профиля</label><input type="file" name="avatar" id="avatar"></div>
+      <div class="citiesSearch">
+        <div><input type="text" name="" id="cities" placeholder="Ваш город..."></div>
+        <ul class="list"></ul>
+      </div>
+      <div><label for="persData">Согласие на обработку персональных данных</label>
+          <input type="checkbox" name="persData" id="persData" required></div>
+      <div><label for="mailing"> Согласие на рассылку персональных предложений по указанному адресу почты</label><input
+          type="checkbox" name="mailing" id="mailing" checked></div>
+      <button type="submit" onclick="return checkPassword(this)">Отправить</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/imask"></script>
+</body>
+
+</html>
+
+
+<!-- <script src="autocomplete.js"></script> -->
+
+
+
+<script>
+  var phoneMask = IMask(
+    document.getElementById('phone-mask'), {
+    mask: '+{7}(000)000-00-00'
+  });
+
+  function checkPassword(form) {
+    password1 = document.querySelector("input[name ='password']").value;
+    password2 = document.querySelector("input[name ='passwordRewrite']").value;
+
+    // If password not entered
+    if (password1 == '')
+      alert("Пожалуйста, введите пароль");
+    // If confirm password not entered
+    else if (password2 == '')
+      alert("Пожалуйста, подтвердите ваш пароль");
+
+    // If Not same return False.
+    else if (password1 != password2) {
+      alert(" Пиздиш")
+      return false;
+    }
+
+    // If same return True.
+    else {
+      alert("Не пиздиш")
+      return true;
+    }
+
+  }
+</script>
+
+<script>
+  let cities = [
+    "Москва",
+    "Санкт-Петербург",
+    "Екатеринбург",
+    "Уфа",
+    "Омск",
+    "Томск",
+    "Краснодар",
+    "Новосибирск",
+    "Тула",
+    "Калуга",
+    "Ростов-На-Дону",
+    "Архангельск",
+    "Астрахань",
+    "Хабаровск",
+    "Владивосток",
+    "Тюмень",
+    "Сургут",
+    "Сочи",
+    "Элиста",
+    "Махачкала",
+    "Грозный",
+    "Дербент",
+    "Дубна",
+    "Подольск",
+    "Ижевск",
+    "Ульяновск",
+    "Самара",
+    "Рязань",
+    "Камчатка",
+  ]
+
+  let sortedNames = cities.sort();
+
+  let citiesInput = document.getElementById("cities")
+
+  if (citiesInput) {
+    citiesInput.addEventListener("keyup", (e) => {
+      removeElements();
+      for (let i of sortedNames) {
+        if ((i.toLowerCase().startsWith(citiesInput.value.toLowerCase())) && citiesInput.value != "") {
+          let listItem = document.createElement("li")
+          listItem.classList.add("list-items");
+          listItem.style.cursor = "pointer";
+          listItem.setAttribute("onclick", "displayNames('" + i + "')");
+          let word = "<b>" + i.substring(0, citiesInput.value.length) + "</b>";
+          word += i.substring(citiesInput.value.length);
+          listItem.innerHTML = word;
+          document.querySelector(".list").appendChild(listItem);
+        }
+
+      }
+    })
+  }
+
+  function displayNames(value) {
+    citiesInput.value = value;
+    removeElements();
+  }
+
+  function removeElements() {
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+      item.remove();
+    });
+  }
+
+</script>

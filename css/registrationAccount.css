@@ -1,0 +1,156 @@
+*{
+    margin: 0; 
+    padding: 0;
+    outline: none;
+    text-decoration: none; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+
+/* Header */
+
+.header-table {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    background: rgb(207, 43, 14);
+    color: white;
+}
+
+.header-table td {
+    width: 33%;
+}
+
+.header-table a {
+    color: white;
+}
+
+
+.siteName {
+    text-align: center;
+    font-size: 72px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    color: wheat
+}
+
+.forms {
+    text-align: right;
+}
+
+.forms div {
+    padding-bottom: 10px;
+}
+
+.reglogButtons {
+    position: relative;
+    float: right;
+}
+
+/* Штука, которая под хэдером*/
+
+.underHeader-table {
+    width: 100%;
+    height: 35px;
+    background: rgb(207, 43, 14);
+    margin-bottom: 10px;
+}
+
+.underHeader-table td {
+    text-align: center;
+
+}
+
+.underHeader-table a {
+    color: white;
+    font-size: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.underHeader-table a:hover {
+    font-weight: 800;
+}
+
+
+
+/* site */
+
+.registration_wrapper{
+    padding: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.registration_wrapper input:valid {
+    border: 2px solid green;
+
+ }
+
+ 
+ .registration_wrapper .form {
+   padding: 0 20px 0 20px;
+
+ }
+
+ #persData{
+   width: auto;
+ }
+
+ #mailing{
+   width: auto;
+ }
+
+ .registration_wrapper input {
+   margin-bottom: 10px;
+   padding: 10px 0;
+   width: 100%;
+   border-radius: 5px;
+   font-size: 16px;
+   outline: none;
+ }
+
+ .registration_wrapper input:focus {
+   -webkit-box-shadow: 13px 13px 9px -2px rgba(34, 60, 80, 0.38);
+   -moz-box-shadow: 13px 13px 9px -2px rgba(34, 60, 80, 0.38);
+   box-shadow: 13px 13px 9px -2px rgba(34, 60, 80, 0.38);
+ }
+
+
+ .registration_wrapper label {
+   
+   margin-right: 10px;
+ }
+
+ .registration_wrapper ul {
+   list-style: none;
+ }
+
+ #cities {
+    width: 97.9%;
+   padding: 15px 10px;
+   outline: none;
+   border-radius: 5px 5px 0 0;
+   background-color: #ffffff;
+   font-size: 16px;
+   margin-bottom: 0;
+ }
+
+ #avatar:valid{
+   border:none;
+ }
+
+ .list {
+   background-color: rgb(172, 170, 169);
+   width: 100.35%;
+   border-radius: 0 0 5px 5px;
+ }
+
+ .list-items {
+   padding: 10px 5px;
+ }
+
+ .list-items:hover {
+   background-color: #ffcb20;
+   border-radius: 0 0 5px 5px;
+ }

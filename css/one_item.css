@@ -1,0 +1,265 @@
+*{
+    margin: 0; 
+    padding: 0;
+    outline: none;
+    text-decoration: none; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+
+/* Header */
+
+.header-table{
+width: 100%;
+height: 100px;
+border: 1px solid black;
+background: rgb(207, 43, 14);
+color: white;
+}
+
+.header-table td {
+width: 33%;
+}
+
+.header-table a{
+color:white;
+}
+
+
+.siteName{
+text-align: center;
+font-size: 72px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+font-weight: 800;
+color: wheat
+}
+
+.forms {
+text-align: right;
+}
+
+.forms div{
+padding-bottom: 10px;
+}
+
+.reglogButtons {
+position: relative;
+float: right;
+}
+
+/* Штука, которая под хэдером*/
+
+.underHeader-table {
+    width: 100%;
+    height: 35px;
+    background: rgb(207, 43, 14);
+    
+}
+
+.underHeader-table td {
+text-align: center;
+
+}
+
+.underHeader-table a{
+color: white;
+font-size: 20px;
+transition: all 0.1s ease-in-out;
+}
+
+.underHeader-table a:hover{
+font-weight: 800;
+}
+
+
+/* контейнер */
+
+
+.container{
+    padding: 100px 250px 0px;
+    font-size: 24px;
+}
+
+.container .content{
+    border: 1px solid black;
+    border-radius: 10px;
+    max-height: 600px;
+    min-height: 500px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8,1fr);
+    justify-items: center;
+    align-items: center;
+}
+    /* grid-template-areas:
+    "image image image title title title"
+    "image image image specs specs specs"
+    "image image image rating rating rating"
+    "image image image price price price"
+    "image image image sale sale sale"
+    "image image image sale sale sale"; */
+
+.title {
+    /* grid-area: title; */
+    font-weight: 700;
+    text-align: justify;
+}
+.description {
+    
+}
+.item_image{
+    grid-row: span 8;
+    justify-self:center;
+    align-self: center;
+
+}
+.item_image img{
+    /* grid-area: image; */
+    max-height: 450px;
+}
+
+
+.specs {
+    /* grid-area: specs; */
+    grid-row: span 1;
+    
+}
+.item_rating {
+    display: flex;
+    gap: 10px;
+    grid-row: span 1;
+    justify-self: baseline;
+}
+
+.item_rating .stars{
+    display: inline-block;
+    background-repeat: repeat-x;
+    width: 120px;
+    background-size: 25px;
+    height: 35px;
+    background-image: url(../source/img/star_orange.svg);
+    background-position-y: 6px;
+}
+
+.price {
+    grid-row: span 2;
+    /* grid-area: price; */
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.price .amount{
+    width: 50%;
+    background: linear-gradient(266deg,#99896c,hsla(0,0%,100%,0));
+    border-radius: 25px;
+}
+
+.price .wishlist{
+    width: 10%;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.price .wishlist:active{
+    transform: scale(0.9);
+
+}
+
+
+.price .buy_btn{
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.price .buy_btn:active{
+    transform: scale(0.9);
+}
+
+.price img{
+    height: 30px;
+}
+
+.sale {
+    grid-row: span 3;
+    /* grid-area: sale; */
+}
+
+/* нижняя менюха */
+
+.down_container{
+    margin-bottom: 100px;
+    padding: 100px 250px 0px;
+    font-size: 24px;
+    
+}
+
+
+.down_container_content{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menu{
+    display: inline-flex;
+    gap: 10px;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+
+.specsButton{
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rewiewbutton{
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.specsButton.unactive{
+    border: 1px solid #000;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rewiewbutton.active{
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.specsText{
+    display: block;
+}
+
+.specsText.hide{
+    display: none;
+
+}
+
+.rewiewText {
+    display: none;
+}
+
+.rewiewText.show{
+    display: block;
+}

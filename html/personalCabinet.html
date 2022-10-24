@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Кабинет</title>
+    <link rel="stylesheet" href="../css/personalCabinet.css">
+</head>
+<body>
+    <div class="PageTitle">
+        ЛИЧНЫЙ КАБИНЕТ
+    </div>
+    <div class="backHome"><a href="../html/index.html">Вернуться на главную</a></div>
+    <div class="info">
+        <div class="personalData">
+            <div class="name">Имя: Виталик</div>
+            <div class="lname">Фамилия: Пижов</div>
+            <div class="dataOfBirth">Дата рождения: 27.07.1975</div>
+        </div>
+        <div class="adress">
+            <div class="country">Страна: Россия</div>
+            <div class="city">Город: Москва</div>
+            <div class="adresss">Адрес: Проспект Мира д.16</div>
+        </div>
+        <div class="avatar">
+            <div class="title">Аватар профиля</div>
+            <div class="image">
+                <input class = "pickImageInput"type="file">
+                <div class="avatars">
+                    <img class="avatarChangeIcon" src="../source/img/avatar_change.png" alt="">
+                    <img class="profileAvatar" src="../source/img/avatar_aang.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="changePasswords">
+            <div>Сменить пароль</div>
+            <div>
+                <label for="oldPass">Старый пароль </label>
+                <input type="password" name="oldPass" id="oldPass"></div>
+            <div>
+                <label for="newPass">Новый пароль </label>
+                <input type="password" name="newPass" id="newPass">
+            </div>
+            <button onclick="return wtf(this)">Изменить</button>
+        </div>
+        <div class="dealHistory">
+            <p>История заказов сейчас пуста</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function wtf(){
+        alert("Ты шизо? Здесь же ничего не работает")
+    }
+</script>
