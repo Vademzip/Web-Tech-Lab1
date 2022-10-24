@@ -119,7 +119,7 @@ font-weight: 800;
 }
 
 
-.goods .item1,.item2,.item3,.item4,.item5,.item6{
+.goods .item1,.item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9,.item10 {
     margin-left: 50pxs;
     display: flex;
     flex-direction: column;
@@ -128,11 +128,13 @@ font-weight: 800;
     align-items: center;
 }
 
-.goods .item1 a:hover,.item2 a:hover,.item3 a:hover,.item4 a:hover,.item5 a:hover,.item6 a:hover{
+.goods .item1 a:hover,.item2 a:hover,.item3 a:hover,.item4 a:hover,.item5 a:hover,.item6 a:hover,
+.item7 a:hover,.item8 a:hover,.item9 a:hover,.item10 a:hover
+{
     transform: scale(1.1);
 }
 
-.item1 div,.item2 div,.item3 div,.item4 div,.item5 div,.item6 div{
+.item1 div,.item2 div,.item3 div,.item4 div,.item5 div,.item6 div, .item7 div,.item8 div,.item9 div,.item10 div{
     margin-top: 5px;
 }
 

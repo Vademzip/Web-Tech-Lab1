@@ -42,6 +42,15 @@
     padding-bottom: 10px;
 }
 
+.name-error{
+  color: red;
+  visibility: hidden;
+}
+
+.name-error.on{
+  visibility: visible;
+}
+
 .reglogButtons {
     position: relative;
     float: right;

@@ -29,7 +29,7 @@
     <table class="underHeader-table lock-padding">
         <td><a href="../html/index.html">Главная</a></td>
         <td><a href="aboutUs.html" target="mainpage">История фирмы</a></td>
-        <td><a href="aboutUs.html" target="mainpage">Сотрудники</a></td>
+        <td><a href="../html/staff.html" target="mainpage">Сотрудники</a></td>
         <td><a href="news.html" target="mainpage">Новости и Статьи</a></td>
         <td><a href="registration.html" target="mainpage">Регистрация фирм</a></td>
     </table>
@@ -39,7 +39,8 @@
   <div class="registration_wrapper">
     <h1 align = "center">Регистрация</h1>
     <form autocomplete="off" action="">
-      <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName" value="Вадим"></div>
+      <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName"></div>
+      <div class="name-error" id="name-error">Имя должно содержать больше трёх символов</div>
       <div><label for="login"> Логин</label><input type="text" name="login" id="login" value="Vadem45454" required></div>
       <div><label for="email"> Почта</label><input type="email" name="email" id="email" value="vadim.sardarov@yandex.ru"
           required></div>
@@ -65,6 +66,7 @@
   </div>
 
   <script src="https://unpkg.com/imask"></script>
+  <script src="../js/checkname.js"></script>
 </body>
 
 </html>

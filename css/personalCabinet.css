@@ -152,6 +152,10 @@ body{
     opacity: 0;
 }
 
+input{
+    border-radius: 5px;
+    height: 30px;
+}
 
 .avatar div:hover{
     transform: scale(1);
