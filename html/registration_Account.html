@@ -20,7 +20,7 @@
                 <div><label for="password">Пароль : </label><input id="password" type="password"></div>
             </div>
             <div class="reglogButtons">
-                <a href="registration_Account.html" target="mainpage">Регистрация</a>
+                <a href="registration_Account.html" >Регистрация</a>
                 <a href="loginPage.html"><button>Войти</button></a>
             </div>
         </td>
@@ -28,10 +28,10 @@
 
     <table class="underHeader-table lock-padding">
         <td><a href="../html/index.html">Главная</a></td>
-        <td><a href="aboutUs.html" target="mainpage">История фирмы</a></td>
-        <td><a href="../html/staff.html" target="mainpage">Сотрудники</a></td>
-        <td><a href="news.html" target="mainpage">Новости и Статьи</a></td>
-        <td><a href="registration.html" target="mainpage">Регистрация фирм</a></td>
+        <td><a href="aboutUs.html" >История фирмы</a></td>
+        <td><a href="../html/staff.html" >Сотрудники</a></td>
+        <td><a href="news.html" >Новости и Статьи</a></td>
+        <td><a href="registration.html" >Регистрация фирм</a></td>
     </table>
 
 
@@ -95,13 +95,13 @@
 
     // If Not same return False.
     else if (password1 != password2) {
-      alert(" Пиздиш")
+      alert("Пароль введен неправильно!")
       return false;
     }
 
     // If same return True.
     else {
-      alert("Не пиздиш")
+      alert("Пароль был введён правильно!")
       return true;
     }
 

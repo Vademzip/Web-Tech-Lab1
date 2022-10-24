@@ -65,8 +65,8 @@ body{
 }
 
 .personalData{
-    height: 200px;
-    width: 450px;
+    height: 180px;
+    width: 350px;
     background-color: #fff;
     text-align: center;
     justify-content: center;
@@ -75,7 +75,7 @@ body{
 }
 
 .personalData div{
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .personalData div:hover{
@@ -85,8 +85,8 @@ body{
 
 
 .adress{
-    height: 200px;
-    width: 450px;
+    height: 180px;
+    width: 350px;
     background-color: #fff;
     text-align: center;
     justify-content: center;
@@ -95,7 +95,7 @@ body{
 }
 
 .adress div {
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .adress div:hover{
@@ -186,7 +186,7 @@ input{
 
 .changePasswords{
     height: 220px;
-    width: 600px;
+    width: 400px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -196,7 +196,7 @@ input{
 
 .changePasswords input{
     height: 30px;
-    width: 400px;
+    width: 300px;
     border-radius: 3px;
     border: none;
 }

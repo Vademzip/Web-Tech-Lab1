@@ -1,6 +1,5 @@
 let firstName = document.getElementById("userName");
 let errors = document.getElementById("name-error")
-console.log(firstName.value)
 
 
 firstName.addEventListener('focus',() =>{
@@ -22,3 +21,4 @@ firstName.addEventListener('blur',() =>{
         errors.classList.remove("on")
     }
 })
+
