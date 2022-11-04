@@ -44,20 +44,45 @@
 
 .name-error{
   color: red;
-  visibility: hidden;
+  display: none;
 }
 
 .name-error.on{
-  visibility: visible;
+  display: block;
+
 }
 
 .password-error{
   color: red;
-  visibility: hidden;
+  display: none;
+
 }
 
+.login-error{
+  color: red;
+  display: none;
+
+}
+
+.login-error.on{
+  display: block;
+}
+
+
 .password-error.on{
-  visibility: visible;
+  display: block;
+
+}
+
+.password2-error{
+  color: red;
+  display: none;
+
+}
+
+.password2-error.on{
+  display: block;
+
 }
 
 .reglogButtons {
