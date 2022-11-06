@@ -1,0 +1,106 @@
+*{
+    margin: 0; 
+    padding: 0;
+    outline: none;
+    text-decoration: none; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+
+/* Header */
+
+.header-table{
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    background: rgb(207, 43, 14);
+    color: white;
+    }
+    
+    .header-table td {
+    width: 33%;
+    }
+    
+    .header-table a{
+    color:white;
+    }
+    
+    
+    .siteName{
+    text-align: center;
+    font-size: 72px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-weight: 800;
+    color: wheat
+    }
+    
+    .forms {
+    text-align: right;
+    }
+    
+    .forms div{
+    padding-bottom: 10px;
+    }
+    
+    .reglogButtons {
+    position: relative;
+    float: right;
+    }
+    
+    /* Штука, которая под хэдером*/
+    
+    .underHeader-table {
+        width: 100%;
+        height: 35px;
+        background: rgb(207, 43, 14);
+        
+    }
+    
+    .underHeader-table td {
+    text-align: center;
+    
+    }
+    
+    .underHeader-table a{
+    color: white;
+    font-size: 20px;
+    transition: all 0.1s ease-in-out;
+    }
+    
+    .underHeader-table a:hover{
+    font-weight: 800;
+    }
+
+
+    /* контейнер */
+    .container{
+        margin: 100px 250px 50px;    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .container img{
+        border-radius: 10px;
+        width: 280px;
+    }
+
+    .item1, .item2 , .item3 , .item4 , .item5 , .item6 , .item7 , .item8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item1 img, .item2 img, .item3 img, .item4 img, .item5 img, .item6 img, .item7 img, .item8 img{
+        transition: all 0.1s ease-in-out;
+    }
+
+    .item1.unactive img, .item2.unactive img, .item3.unactive img, .item4.unactive img, .item5.unactive img,
+    .item6.unactive img, .item7.unactive img, .item8.unactive img{
+        filter: brightness(40%) 
+    }
+
+    
+ 
+

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\StaticPageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/s/{pageid}', [staticPageController::class, 'show'])->name('static_page');
+
+Route::redirect('/','/s/home');
+
+require_once (__DIR__.'/auth.php');

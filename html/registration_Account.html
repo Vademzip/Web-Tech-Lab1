@@ -9,33 +9,6 @@
 </head>
 <body>
   <body>
-    <table class="header-table lock-padding">
-        <td><a href="../html/index.html">
-                <center><img src="https://www.gestion.ru/wp-content/uploads/2020/09/logo6.svg" alt=""></center>
-            </a></td>
-        <td class="siteName">Гестион</td>
-        <td>
-            <div class="forms">
-                <div><label for="login">Логин : </label><input id="login"></div>
-                <div><label for="password">Пароль : </label><input id="password" type="password"></div>
-            </div>
-            <div class="reglogButtons">
-                <a href="registration_Account.html" >Регистрация</a>
-                <a href="loginPage.html"><button>Войти</button></a>
-            </div>
-        </td>
-    </table>
-
-    <table class="underHeader-table lock-padding">
-        <td><a href="../html/index.html">Главная</a></td>
-        <td><a href="aboutUs.html" >История фирмы</a></td>
-        <td><a href="../html/staff.html" >Сотрудники</a></td>
-        <td><a href="news.html" >Новости и Статьи</a></td>
-        <td><a href="registration.html" >Регистрация фирм</a></td>
-    </table>
-
-
-
   <div class="registration_wrapper">
     <h1 align = "center">Регистрация</h1>
     <form  autocomplete="off" action="">
@@ -57,14 +30,14 @@
       <div class="password2-error" id="password2-error">Пароли не совпадают</div>
       <div><label for="avatar"> Аватар профиля</label><input type="file" name="avatar" id="avatar"></div>
       <div class="citiesSearch">
-        <div><input type="text" name="" id="cities" placeholder="Ваш город..."></div>
+        <div><input type="text" name="city" id="cities" placeholder="Ваш город..."></div>
         <ul class="list"></ul>
       </div>
       <div><label for="persData">Согласие на обработку персональных данных</label>
           <input type="checkbox" name="persData" id="persData" required></div>
       <div><label for="mailing"> Согласие на рассылку персональных предложений по указанному адресу почты</label><input
           type="checkbox" name="mailing" id="mailing" checked></div>
-      <button type="submit">Отправить</button>
+      <button name="submitButton" type="submit">Отправить</button>
     </form>
   </div>
 
