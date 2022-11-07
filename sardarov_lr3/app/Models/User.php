@@ -23,7 +23,7 @@ class User extends Authenticatable
         'password',
         'login2',
         'dateOfBirth',
-        'number',
+        'phoneNumber',
         'password2',
         'city',
         'avatar',

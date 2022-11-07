@@ -24,6 +24,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+        \Illuminate\Support\Facades\Auth::provider('pdo',function ($app,$config){
+            return $app->make(\App\Providers\PDOUserProvider::class);
+        });
 
         //
     }

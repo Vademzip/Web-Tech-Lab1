@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'pdo',
         ],
     ],
 
@@ -60,11 +60,13 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        /*'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],*/
+        'pdo' => [
+            'driver' => 'pdo',
         ],
-
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
