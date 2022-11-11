@@ -22,16 +22,14 @@
             </a></td>
         <td class="siteName">Гестион</td>
         <td>
-            <div class="forms">
-                <form method="GET" action="{{route('auth.login.do')}}">
-                <div><label for="login">Логин : </label><input id="login" name="login" required placeholder="или почта/телефон"></div>
-                <div><label for="password">Пароль : </label><input id="password" name="password" type="password"></div>
-            </div>
-            <div class="reglogButtons">
-                <a href="{{route('auth.register')}}">Регистрация</a>
-                <button>Войти</button>
-            </div>
-            </form>
+                <div class="forms">
+                    <form method="GET" action="{{route('auth.login.do')}}" enctype="multipart/form-data">
+                    <div><label for="login">Логин : </label><input id="login" name="login2" required placeholder="или почта/телефон"></div>
+                    <div><label for="password">Пароль : </label><input id="password" name="password2" type="password"></div>
+                    <a href="{{route('auth.register')}}">Регистрация</a>
+                    <button type="submit">Войти</button>
+                    </form>
+                </div>
         </td>
     </table>
 

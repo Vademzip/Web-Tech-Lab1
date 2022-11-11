@@ -29,7 +29,7 @@ class PDOUserProvider implements UserProvider
 
 
     public function retrieveByCredentials(array $credentials){
-        $row= $this->conn()->query("SELECT * FROM users WHERE login2='".$credentials['login2']."' OR email = '".$credentials['login2']."' OR 'phoneNumber = '".$credentials['login2']."') AND password='".$credentials['password2']."'")->fetch();
+        $row= $this->conn()->query("SELECT * FROM users WHERE (login2='".$credentials['login2']."' OR email = '".$credentials['login2']."' OR phoneNumber = '".$credentials['login2']."') AND password2='".$credentials['password2']."'")->fetch();
         if ($row) {
             return $this->getGenericUser($row);
         }
@@ -45,7 +45,7 @@ class PDOUserProvider implements UserProvider
 
 
     public function validateCredentials(Authenticatable $user, array $credentials){
-        $row= $this->conn()->query("SELECT * FROM users WHERE login2='".$credentials['login2']."' OR email = '".$credentials['login2']."' OR 'phoneNumber = '".$credentials['login2']."') AND password='".$credentials['password2']."'")->fetch();
+        $row= $this->conn()->query("SELECT * FROM users WHERE (login2='".$credentials['login2']."' OR email = '".$credentials['login2']."' OR phoneNumber = '".$credentials['login2']."') AND password2='".$credentials['password2']."'")->fetch();
         return $row? 1: 0;
     }
 

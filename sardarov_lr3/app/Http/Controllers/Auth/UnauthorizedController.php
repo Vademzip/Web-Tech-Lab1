@@ -50,14 +50,13 @@ class UnauthorizedController extends Controller
 
     public function login_do(Request $request){
         $validated = $request->validate([
-            'login2' => 'required|unique:users,login2',
+            'login2' => 'required',
             'password2'=> 'required',
         ]);
 
         if (!Auth::guard()->attempt($validated)){
             return view('auth.message', ['message'=>'auth_error']);
         }
-
 
 
         return view('auth.profile');
