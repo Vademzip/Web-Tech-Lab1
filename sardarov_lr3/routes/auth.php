@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthorizedController;
 use App\Http\Controllers\Auth\UnauthorizedController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
@@ -15,6 +16,7 @@ Route::middleware('guest')->group(function (){
 Route::middleware('auth')->group(function (){
     Route::view('/profile','auth.profile')->name('auth.profile');
     Route::post('/profile.update', [AuthorizedController::class, 'profile_update'])->name('auth.profile.update');
+    Route::get('/profile.logout', [AuthorizedController::class, 'logout'])->name('auth.logout');
 });
 
 

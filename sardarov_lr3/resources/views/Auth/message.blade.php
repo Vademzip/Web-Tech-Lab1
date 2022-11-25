@@ -13,6 +13,9 @@
         @elseif($message == 'auth_error'){
             ВЫ КТО ТАКИЕ,Я ВАС НЕ ЗВАЛ ИДИТЕ НАХУЙ
         }
+        @elseif($message == 'profile_updated'){
+            Здрасьте.
+        }
         @endif
     </h1>
 @endsection

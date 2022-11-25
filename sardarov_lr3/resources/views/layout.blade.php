@@ -22,6 +22,13 @@
             </a></td>
         <td class="siteName">Гестион</td>
         <td>
+            @auth
+                <span>
+                    Здравствуйте, {{auth()->user()->userName}}! <br>
+                    <a href="{{route('auth.profile')}}">Профиль</a>
+                    <a href="{{route('auth.logout')}}">Выход из аккаунта</a>
+                </span>
+            @else
                 <div class="forms">
                     <form method="GET" action="{{route('auth.login.do')}}" enctype="multipart/form-data">
                     <div><label for="login">Логин : </label><input id="login" name="login2" required placeholder="или почта/телефон"></div>
@@ -30,6 +37,7 @@
                     <button type="submit">Войти</button>
                     </form>
                 </div>
+            @endauth
         </td>
     </table>
 
