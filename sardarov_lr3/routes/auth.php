@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function (){
 
 
 
+
 //login.do
 //
 //register.do

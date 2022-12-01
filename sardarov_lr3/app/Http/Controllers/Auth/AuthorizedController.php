@@ -12,17 +12,17 @@ class AuthorizedController extends Controller
     public function profile_update(Request $request){
         $validated = $request->validate([
             'userName' => 'required',
-            'avatar' => 'file',
-            'login2' => 'required|unique:users,login2',
-            'city'=>'required',
-            'email'=> 'required|unique:users,email',
-            'password2'=> 'required',
-            'passwordRewrite'=>['required',function($attribute, $value, $fail){
-                global $request;
-                if ($request->get('password2') != $request->get('password2'))
-                    $fail('the pass1 != pass2');
-            }],
-            'phoneNumber' => 'required|unique:users,phoneNumber',
+//            'avatar' => 'file',
+//            'login2' => 'required|unique:users,login2',
+//            'city'=>'required',
+//            'email'=> 'required|unique:users,email',
+//            'password2'=> 'required',
+//            'passwordRewrite'=>['required',function($attribute, $value, $fail){
+//                global $request;
+//                if ($request->get('password2') != $request->get('password2'))
+//                    $fail('the pass1 != pass2');
+//            }],
+//            'phoneNumber' => 'required|unique:users,phoneNumber',
         ]);
         var_dump($validated);
         $avatar = $request->hasFile('avatar') ? $request->file('avatar') : false ;
@@ -33,7 +33,7 @@ class AuthorizedController extends Controller
 
 
         $user = \App\Models\User::findOrFail(Auth::guard()->user()->id);
-        $user->name = $validated['name'];
+        $user->userName = $validated['userName'];
         $user->save();
 
 
@@ -51,7 +51,7 @@ class AuthorizedController extends Controller
         $request->session()->regenerateToken();
 
 
-        return redirect('/home');
+        return redirect('/s/home');
     }
 
 }

@@ -59,7 +59,7 @@ class UnauthorizedController extends Controller
         }
 
 
-        return view('auth.profile');
+        return redirect ('/profile');
     }
 
 }

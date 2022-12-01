@@ -8,8 +8,8 @@
     <body>
     <div class="registration_wrapper">
         <h1 align = "center">Профиль пользователя</h1>
-        <form method="post"  action="{{route('auth.register.do')}}" enctype="multipart/form-data">
-            <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName" value="{{auth()->guard()->user()->userName}}"> </div>
+        <form method="post"  action="{{route('auth.profile.update')}}" enctype="multipart/form-data">
+                <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName" value="{{auth()->guard()->user()->userName}}"> </div>
             <div><label for="login2"> Логин</label><input type="text" name="login2" id="login2" required value="{{auth()->guard()->user()->login2}}"></div>
             <div><label for="email"> Почта</label><input type="email" name="email" id="email" value="{{auth()->guard()->user()->email}}" required></div>
             <div><label for="dateOfBirth"> Дата рождения</label><input type="date" name="dateOfBirth" value="{{auth()->guard()->user()->dateOfBirth}}"  id="dateOfBirth" checked></div>
