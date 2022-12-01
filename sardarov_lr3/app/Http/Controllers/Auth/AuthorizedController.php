@@ -11,6 +11,7 @@ class AuthorizedController extends Controller
 {
     public function profile_update(Request $request){
         $validated = $request->validate([
+            'userName' => 'required',
             'avatar' => 'file',
             'login2' => 'required|unique:users,login2',
             'city'=>'required',
@@ -50,7 +51,7 @@ class AuthorizedController extends Controller
         $request->session()->regenerateToken();
 
 
-        return redirect('/');
+        return redirect('/home');
     }
 
 }

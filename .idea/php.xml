@@ -111,7 +111,7 @@
       <path value="$PROJECT_DIR$/sardarov_lr3/vendor/myclabs/deep-copy" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/sardarov_lr3/vendor/autoload.php" />
