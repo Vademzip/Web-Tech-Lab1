@@ -4,12 +4,12 @@
 
 
 *{
-        margin: 0; 
+        margin: 0;
         padding: 0;
         outline: none;
-        text-decoration: none; 
+        text-decoration: none;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-        
+
 }
 
 /* Header */
@@ -21,16 +21,16 @@
     background: rgb(207, 43, 14);
     color: white;
     }
-    
+
     .header-table td {
     width: 33%;
     }
-    
+
     .header-table a{
     color:white;
     }
-    
-    
+
+
     .siteName{
     text-align: center;
     font-size: 72px;
@@ -38,45 +38,126 @@
     font-weight: 800;
     color: wheat
     }
-    
+
     .forms {
     text-align: right;
     }
-    
+
     .forms div{
     padding-bottom: 10px;
     }
-    
+
     .reglogButtons {
     position: relative;
     float: right;
     }
-    
+
     /* Штука, которая под хэдером*/
-    
+
     .underHeader-table {
         width: 100%;
         height: 35px;
         background: rgb(207, 43, 14);
-        
+
     }
-    
+
     .underHeader-table td {
     text-align: center;
-    
+
     }
-    
+
     .underHeader-table a{
     color: white;
     font-size: 20px;
     transition: all 0.1s ease-in-out;
     }
-    
+
     .underHeader-table a:hover{
     font-weight: 800;
     }
 
 /* Центральная таблица на странице */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 11fr 1px 1fr;
+    margin-left: 75px;
+    margin-right: 75px;
+    min-height: 900px;
+}
+
+.container img{
+    width: 90%;
+
+}
+
+.sideLinks{
+    display: flex;
+    flex-direction: column;
+}
+
+.sideLinks a{
+    transition: all 0.1s ease-in-out;
+    color: white;
+}
+
+.sideLinks a:hover{
+    font-weight: 700;
+}
+
+
+
+
+
+
+.pivo a{
+    display: flex;
+    justify-content: center;
+}
+
+.pivo a img{
+    max-width: 85%;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.pivo a img:hover{
+    max-width: 90%;
+}
+
+.pivo .topPannel{
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+
+
+aside{
+    background-color: rgb(207, 43, 14);
+}
+
+aside a{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    display: block;
+    font-size: 22px;
+}
+
+
+footer{
+    grid-column: span 3;
+    justify-self: center;
+    width: 100%;
+}
+
+.rightsBlock{
+    text-align: center;
+}
 
 .midleTable{
     margin-left: 15%;
@@ -143,4 +224,13 @@ hr{
     position: relative;
     bottom: 2px;
     color: blue;
+}
+
+.pivo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 15px;
 }
