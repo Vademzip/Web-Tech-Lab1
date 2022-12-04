@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function (){
     Route::get('/logout', [AuthorizedController::class, 'logout'])->name('auth.logout');
 });
 
+Route::view('/register.done','auth.register_done')->name('auth.register.done');
 
 
 

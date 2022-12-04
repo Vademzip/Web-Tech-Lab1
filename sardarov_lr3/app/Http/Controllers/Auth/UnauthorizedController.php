@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class UnauthorizedController extends Controller
 {
@@ -33,7 +34,9 @@ class UnauthorizedController extends Controller
         $validated['pic'] = $avatar ? 'avatars/'.$request->login2.'.jpg' : '';
         $validated['persData'] = $request->has('persData') ? 1 : 0;
         $validated['mailing'] = $request->has('mailing') ? 1 : 0;
-        \App\Models\User::create($validated);
+
+
+        $user = \App\Models\User::create($validated);
 
         if ($avatar){
             @mkdir('avatars');
@@ -43,6 +46,11 @@ class UnauthorizedController extends Controller
             return view('auth.message', ['message'=>'register_done_but_auth_error']);
         }
 
+        $to_name = $user->login2;
+        $to_email = $user->email;
+        Mail::send('auth.register_done_mail', ['name'=> $user->userName], function ($message) use ($to_name,$to_email) {
+            $message->to($to_email,$to_name)->subject('Успешная регистрация');
+        });
 
 
         return view('auth.message', ['message'=>'register_done']);
