@@ -32,7 +32,8 @@ class AuthorizedController extends Controller
         $validated['mailing'] = $request->has('mailing') ? 1 : 0;
 
 
-        $user = \App\Models\User::findOrFail(Auth::guard()->user()->id);
+        $user = Auth::user();
+        // \App\Models\User::findOrFail(Auth::guard()->user()->id);
         $user->userName = $validated['userName'];
         $user->save();
 

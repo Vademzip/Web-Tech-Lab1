@@ -16,21 +16,9 @@ class Permissions extends Migration
         Schema::create('permissions', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->foreignId('user');
-            $table->string('permission')->unique();
-
-            
-            $table->string('login2');
-            $table->string('email')->unique();
-            $table->date('dateOfBirth');
-            $table->string('phoneNumber')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password2');
-            $table->string('city');
-            $table->string('avatar');
-            $table->rememberToken();
-            $table->boolean('persData');
-            $table->boolean('mailing');
-            $table->timestamps();
+            $table->string('permission');
+            $table->unique(['user','permission']);
+            $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

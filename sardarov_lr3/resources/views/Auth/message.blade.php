@@ -16,6 +16,8 @@
         @elseif($message == 'profile_updated'){
             Здрасьте.
         }
+        @elseif($message = 'access_denied')
+            Нет прав.
         @endif
     </h1>
 @endsection

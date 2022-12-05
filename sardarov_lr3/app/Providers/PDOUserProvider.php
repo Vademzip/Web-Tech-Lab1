@@ -15,9 +15,10 @@ class PDOUserProvider implements UserProvider
     }
 
     public function retrieveById($identifier){
-        $row = $this->conn()->query("SELECT * FROM users WHERE id=".$identifier)->fetch();
+        /*$row = $this->conn()->query("SELECT * FROM users WHERE id=".$identifier)->fetch();
         if ($row)
-            return $this->getGenericUser($row);
+            return $this->getGenericUser($row);*/
+        return \App\Models\User::findOrFail($identifier);
     }
 
     public function retrieveByToken($identifier, $token){
