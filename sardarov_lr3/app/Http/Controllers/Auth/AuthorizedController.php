@@ -11,9 +11,9 @@ class AuthorizedController extends Controller
 {
     public function profile_update(Request $request){
         $validated = $request->validate([
-            'userName' => 'required',
+          //  'userName' => 'required',
 //            'avatar' => 'file',
-//            'login2' => 'required|unique:users,login2',
+            'login2' => 'required|unique:users,login2',
 //            'city'=>'required',
 //            'email'=> 'required|unique:users,email',
 //            'password2'=> 'required',
@@ -24,7 +24,6 @@ class AuthorizedController extends Controller
 //            }],
 //            'phoneNumber' => 'required|unique:users,phoneNumber',
         ]);
-        var_dump($validated);
         $avatar = $request->hasFile('avatar') ? $request->file('avatar') : false ;
         $avatar_path_tmp = $avatar ? $avatar->getPathname() : '';
         $validated['pic'] = $avatar ? 'avatars/'.$request->login2.'.jpg' : '';
@@ -33,7 +32,7 @@ class AuthorizedController extends Controller
 
 
         $user = \App\Models\User::findOrFail(Auth::guard()->user()->id);
-        $user->userName = $validated['userName'];
+        $user->login2 = $validated['login2'];
         $user->save();
 
 

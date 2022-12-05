@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticPageController;
 
 
-Route::get('/login.do',[UnauthorizedController::class, 'login_do'])->name('auth.login.do');
+Route::post('/login.do',[UnauthorizedController::class, 'login_do'])->name('auth.login.do');
 
 Route::middleware('guest')->group(function (){
     Route::view('/register','auth.register')->name('auth.register');

@@ -28,7 +28,6 @@ class UnauthorizedController extends Controller
             'phoneNumber' => 'required|unique:users,phoneNumber',
             'mailing' => 'required'
         ]);
-        var_dump($validated);
         $avatar = $request->hasFile('avatar') ? $request->file('avatar') : false ;
         $avatar_path_tmp = $avatar ? $avatar->getPathname() : '';
         $validated['pic'] = $avatar ? 'avatars/'.$request->login2.'.jpg' : '';

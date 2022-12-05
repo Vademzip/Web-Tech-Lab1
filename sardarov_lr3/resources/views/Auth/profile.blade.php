@@ -9,15 +9,14 @@
     <div class="registration_wrapper">
         <h1 align = "center">Профиль пользователя</h1>
         <form method="post"  action="{{route('auth.profile.update')}}" enctype="multipart/form-data">
-                <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName" value="{{auth()->guard()->user()->userName}}"> </div>
-            <div><label for="login2"> Логин</label><input type="text" name="login2" id="login2" required value="{{auth()->guard()->user()->login2}}"></div>
-            <div><label for="email"> Почта</label><input type="email" name="email" id="email" value="{{auth()->guard()->user()->email}}" required></div>
-            <div><label for="dateOfBirth"> Дата рождения</label><input type="date" name="dateOfBirth" value="{{auth()->guard()->user()->dateOfBirth}}"  id="dateOfBirth" checked></div>
-            <div><label for="phone-mask"> Номер телефона</label><input type="text" name="phoneNumber"  id="phone-mask" required value="{{auth()->guard()->user()->phoneNumber}}">
+            <div><label for="userName"> Имя</label><input type="text" name="userName" id="userName" readonly value="{{auth()->guard()->user()->userName}}"></div>
+            <div><label for="login2"> Логин</label><input type="text" name="login2" id="login2"  required value="{{auth()->guard()->user()->login2}}"></div>
+            <div><label for="email"> Почта</label><input type="email" name="email" id="email" readonly value="{{auth()->guard()->user()->email}}" required></div>
+            <div><label for="dateOfBirth"> Дата рождения</label><input type="date" name="dateOfBirth" readonly value="{{auth()->guard()->user()->dateOfBirth}}"  id="dateOfBirth" checked></div>
+            <div><label for="phone-mask"> Номер телефона</label><input type="text" name="phoneNumber"  readonly id="phone-mask" required value="{{auth()->guard()->user()->phoneNumber}}">
             </div>
-            <div><label for="avatar"> Аватар профиля</label><input type="file" name="avatar" id="avatar" value="{{auth()->guard()->user()->avatar}}"></div>
             <div class="citiesSearch">
-                <div><input type="text" name="city" id="cities" placeholder="Ваш город..." value="{{auth()->guard()->user()->city}}"></div>
+                <div><input type="text" name="city" id="cities" placeholder="Ваш город..." readonly value="{{auth()->guard()->user()->city}}"></div>
                 <ul class="list"></ul>
             </div>
             <button name="submitButton" type="submit">Обновить данные</button>

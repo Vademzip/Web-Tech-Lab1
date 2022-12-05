@@ -25,13 +25,13 @@
         <td>
             @auth
                 <span>
-                    Здравствуйте, {{auth()->user()->userName}}! <br>
+                    Здравствуйте, {{auth()->user()->login2}}! <br>
                     <a href="{{route('auth.profile')}}">Профиль</a>
                     <a href="{{route('auth.logout')}}">Выход из аккаунта</a>
                 </span>
             @else
                 <div class="forms">
-                    <form method="GET" action="{{route('auth.login.do')}}" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('auth.login.do')}}" enctype="multipart/form-data">
                     <div><label for="login">Логин : </label><input id="login" name="login2" required placeholder="или почта/телефон"></div>
                     <div><label for="password">Пароль : </label><input id="password" name="password2" type="password"></div>
                     <a href="{{route('auth.register')}}">Регистрация</a>

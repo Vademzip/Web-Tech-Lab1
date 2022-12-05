@@ -107,10 +107,6 @@
 }
 
 
-
-
-
-
 .pivo a{
     display: flex;
     justify-content: center;
@@ -234,3 +230,7 @@ hr{
     gap: 40px;
     padding-bottom: 15px;
 }
+
+
+
+

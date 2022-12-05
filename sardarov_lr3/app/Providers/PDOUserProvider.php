@@ -42,6 +42,7 @@ class PDOUserProvider implements UserProvider
         $sth->bindParam(':password', $credentials['password2'], PDO::PARAM_STR);
         $sth->execute();
         $row = $sth->fetch();
+
         if ($row) {
             return $this->getGenericUser($row);
         }
