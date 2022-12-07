@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('permissions', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->smallInteger('catalog');
             $table->smallInteger('manufacturer_id');
@@ -22,13 +22,17 @@ return new class extends Migration
             $table->text('short_description');
             $table->text('description');
             $table->decimal('price');
-            $table->string('image',255);
-            $table->boolean('available')->default(true);
             $table->string('meta_keywords',255)->nullable();
             $table->string('meta_description',255)->nullable();
             $table->string('meta_title',255)->nullable();
+
+            $table->string('image',255);
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
+
+
+
     }
 
     /**
@@ -38,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists('products');
     }
-}
+};
