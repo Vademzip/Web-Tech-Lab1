@@ -58,7 +58,7 @@ class User extends Authenticatable
 
     public function havePermissions($required_permission){
         foreach ($this->permissions as $permission)
-            if (fnmatch($permission, $required_permission))
+            if (fnmatch($permission->permission, $required_permission))
                 return true;
         return false;
     }

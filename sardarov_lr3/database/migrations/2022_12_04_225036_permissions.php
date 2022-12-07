@@ -16,7 +16,7 @@ class Permissions extends Migration
         Schema::create('permissions', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->foreignId('user');
-            $table->string('permission')->unique();
+            $table->string('permission');
 
             $table->unique(['user','permission']);
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');

@@ -30,8 +30,7 @@ class AuthorizedController extends Controller
         $validated['persData'] = $request->has('persData') ? 1 : 0;
         $validated['mailing'] = $request->has('mailing') ? 1 : 0;
 
-
-        $user = \App\Models\User::findOrFail(Auth::guard()->user()->id);
+        $user = Auth::user();
         $user->login2 = $validated['login2'];
         $user->save();
 

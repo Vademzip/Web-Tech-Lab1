@@ -19,7 +19,7 @@ class PDOUserProvider implements UserProvider
         if ($row)
             return $this->getGenericUser($row);*/
 
-        return \App\Models\User::findOrFail($identifier);
+        return \App\Models\User::find($identifier);
 
     }
 
