@@ -13,7 +13,7 @@ Route::middleware('guest')->group(function (){
     Route::post('/register.do', [UnauthorizedController::class, 'register_do'])->name('auth.register.do');
 });
 
-Route::middleware('auth')->group(function (){
+Route::middleware('auth','permission:profile.actions')->group(function (){
     Route::view('/profile','auth.profile')->name('auth.profile');
     Route::post('/profile.update', [AuthorizedController::class, 'profile_update'])->name('auth.profile.update');
     Route::get('/logout', [AuthorizedController::class, 'logout'])->name('auth.logout');
